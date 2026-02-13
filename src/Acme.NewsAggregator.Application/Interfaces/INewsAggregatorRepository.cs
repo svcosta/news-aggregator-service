@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Acme.NewsAggregator.Domain;
 
 namespace Acme.NewsAggregator.Application.Interfaces
 {
-    internal class INewsAggregatorRepository
+    public interface INewsAggregatorRepository
     {
+        void Add(StoryEntity bookEntity);
+
+        IEnumerable<StoryEntity> GetAll();
+
     }
 }

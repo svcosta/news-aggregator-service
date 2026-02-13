@@ -13,11 +13,22 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 //Depency Injection
-
+/*
 builder.Services.AddHttpClient<INewsAggregatorService, NewsAggregatorService>(client =>
 {
     client.BaseAddress = new Uri("https://hacker-news.firebaseio.com/v0/");
+});*/
+
+builder.Services.AddHttpClient<INewsAggregatorService, NewsAggregatorService>((sp, client) =>
+{
+    var configuration = sp.GetRequiredService<IConfiguration>();
+    var baseUrl = configuration["HackerNews:BaseUrl"];
+    client.BaseAddress = new Uri(baseUrl);
 });
+
+
+//builder.Services.AddScoped<INewsAggregatorRepository, NewsAggregatorRepository>();
+
 
 var app = builder.Build();
 
