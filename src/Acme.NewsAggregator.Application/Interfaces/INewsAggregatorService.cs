@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Acme.NewsAggregator.Application.Dtos;
 
 namespace Acme.NewsAggregator.Application.Interfaces
 {
-    internal interface INewsAggregatorService
+    public interface INewsAggregatorService
     {
+        public Task<IEnumerable<StoryDto>> GetBestStoriesAsync(int n);
     }
 }

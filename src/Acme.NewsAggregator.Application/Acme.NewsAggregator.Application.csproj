@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Acme.NewsAggregator.Domain\Acme.NewsAggregator.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
