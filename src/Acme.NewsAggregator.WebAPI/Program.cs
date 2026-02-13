@@ -14,7 +14,10 @@ builder.Services.AddOpenApi();
 
 //Depency Injection
 
-builder.Services.AddScoped<INewsAggregatorService, NewsAggregatorService>();
+builder.Services.AddHttpClient<INewsAggregatorService, NewsAggregatorService>(client =>
+{
+    client.BaseAddress = new Uri("https://hacker-news.firebaseio.com/v0/");
+});
 
 var app = builder.Build();
 
