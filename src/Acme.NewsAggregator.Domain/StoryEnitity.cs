@@ -8,7 +8,7 @@ public class StoryEntity : Entity
     public string Title { get; private set; }
     public string Uri { get; private set; }
     public string PostedBy { get; private set; }
-    public DateTime Time { get; private set; }
+    public long Time { get; private set; }
     public int Score { get; private set; }
     public int CommentCount { get; private set; }
 
@@ -19,7 +19,7 @@ public class StoryEntity : Entity
         string title,
         string uri,
         string postedBy,
-        DateTime time,
+        long time,
         int score,
         int commentCount)
     {

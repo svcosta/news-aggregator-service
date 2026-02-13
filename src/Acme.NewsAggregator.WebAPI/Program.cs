@@ -1,4 +1,5 @@
 using Acme.NewsAggregator.Application.Interfaces;
+using Acme.NewsAggregator.Infrastructure.Persistence;
 using Acme.NewsAggregator.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,11 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 //Depency Injection
-/*
-builder.Services.AddHttpClient<INewsAggregatorService, NewsAggregatorService>(client =>
-{
-    client.BaseAddress = new Uri("https://hacker-news.firebaseio.com/v0/");
-});*/
+
 
 builder.Services.AddHttpClient<INewsAggregatorService, NewsAggregatorService>((sp, client) =>
 {
@@ -26,9 +23,7 @@ builder.Services.AddHttpClient<INewsAggregatorService, NewsAggregatorService>((s
     client.BaseAddress = new Uri(baseUrl);
 });
 
-
-//builder.Services.AddScoped<INewsAggregatorRepository, NewsAggregatorRepository>();
-
+builder.Services.AddScoped<INewsAggregatorRepository, NewsAggregatorRepository>();
 
 var app = builder.Build();
 
