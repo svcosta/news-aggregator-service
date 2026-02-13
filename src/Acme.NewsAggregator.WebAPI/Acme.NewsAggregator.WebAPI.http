@@ -1,0 +1,6 @@
+@Acme.NewsAggregator.WebAPI_HostAddress = http://localhost:5077
+
+GET {{Acme.NewsAggregator.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

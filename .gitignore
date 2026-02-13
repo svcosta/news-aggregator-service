@@ -1,0 +1,65 @@
+## --- Visual Studio & .NET Core ---
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Re]leasePublic/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## --- .slnx specific ---
+# While .slnx files are tracked, VS creates temporary 
+# metadata or backup files in some environments.
+*.slnx.user
+
+## --- Visual Studio Tooling ---
+.vs/
+# Visual Studio Task Runner Explorer
+_ExternalAPIs/
+
+## --- User-specific files ---
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## --- Roslyn & Analyzers ---
+.analyzerdata/
+
+## --- Project-specific ---
+# User-specific project settings
+*.csproj.user
+*.pubxml
+*.pubxml.user
+
+## --- Package Management ---
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored as they are restored via the project file
+**/packages/*
+# Except build/tooling files needed for restore
+!**/packages/build/
+
+## --- Environment & Secrets ---
+# Standard secrets file for .NET
+usersecrets.json
+.env
+.env.*
+!.env.example
+
+## --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+## --- Test Results ---
+TestResults/
+*.trx
+*.vstest

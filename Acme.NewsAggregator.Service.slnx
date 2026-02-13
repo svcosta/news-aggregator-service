@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/News Aggregator Service/">
+    <Project Path="src/Acme.NewsAggregator.Application/Acme.NewsAggregator.Application.csproj" Id="fd9812d6-f450-4ad2-8408-ce4da3d8c743" />
+    <Project Path="src/Acme.NewsAggregator.Domain/Acme.NewsAggregator.Domain.csproj" Id="15a87cd1-8499-49e0-99e4-ff852ebe4acb" />
+    <Project Path="src/Acme.NewsAggregator.Infrastructure/Acme.NewsAggregator.Infrastructure.csproj" Id="57eae65b-7c64-480c-bf38-69e38d46a9b1" />
+    <Project Path="src/Acme.NewsAggregator.WebAPI/Acme.NewsAggregator.WebAPI.csproj" Id="b3b65b43-1144-49fa-a293-39ad7154fb71" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="tests/Acme.NewsAggregator.Service.Tests/Acme.NewsAggregator.Service.Tests.csproj" Id="61f45869-4d9a-4faf-b05c-94427d78d1b8" />
+  </Folder>
+</Solution>
